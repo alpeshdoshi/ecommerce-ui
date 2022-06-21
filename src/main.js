@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+window.axios = require('axios')
+import swal from 'sweetalert';
+import router from './router'
+window.Swal = swal;
+
+createApp(App).use(router).mount('#app')
