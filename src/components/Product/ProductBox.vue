@@ -7,6 +7,9 @@
       <h3 class="card-title">{{product.name}}</h3>
       <p class="card-text"><sup>$</sup>{{product.price}}</p>
       <p class="card-text font-italic">{{product.description.substring(0,65)}}...</p>
+      <router-link id="edit-product" :to="{name : 'EditProduct', params : {id : product.id} }" v-show="$route.name=='AdminProduct'">
+        Edit
+      </router-link>
     </div>
   </div>
 </template>
@@ -15,6 +18,12 @@
 //component to display each product
 export default {
   name : "ProductBox",
+  //this component accepts input called product- this input is passed from Product.vue where ProductBox component is used.
+  //this is how it's called from Product.vue component
+  /*
+  * <ProductBox :product="product">
+        </ProductBox>
+  * */
   props : ["product"],
   methods : {
   }
