@@ -3,20 +3,13 @@ import HomeView from '../views/HomeView.vue'
 import AddCategory from "../views/Category/AddCategory";
 import Category from "../views/Category/Category";
 import EditCategory from "../views/Category/EditCategory";
+import AddProduct from "../views/Product/AddProduct"
+import Product from "../views/Product/Product"
 const routes = [
   {
     path: "/",
     name: "Home",
     component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-        import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
     path: "/admin/category/add",
@@ -32,7 +25,17 @@ const routes = [
     path: "/admin/category/:id",
     name: "EditCategory",
     component: EditCategory
-  }
+  },
+  {
+    path: "/admin/product/add",
+    name: "AddProduct",
+    component: AddProduct,
+  },
+  {
+    path: "/admin/product",
+    name: "AdminProduct",
+    component: Product,
+  },
 ];
 
 const router = createRouter({
