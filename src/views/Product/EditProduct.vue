@@ -76,7 +76,7 @@ export default {
         }
       })
           .then(() => {
-            //sending the event to parent to handle
+            //sending the event to parent to handle- pass information from the child component back to the parent
             this.$emit("fetchData");
             //route user to prodcts page after successfull update
             this.$router.push({name : 'AdminProduct'});
