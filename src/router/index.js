@@ -7,6 +7,10 @@ import AddProduct from "../views/Product/AddProduct";
 import Product from "../views/Product/Product";
 import EditProduct from "../views/Product/EditProduct";
 import ShowDetails from "../views/Product/ShowDetails";
+import Signup from "../views/Signup";
+import Signin from "../views/Signin";
+import WishList from "../views/Product/WishList"
+import Cart from "../views/cart/Cart"
 const routes = [
   {
     path: "/",
@@ -47,7 +51,27 @@ const routes = [
     path : '/product/show/:id',
     name : 'ShowDetails',
     component: ShowDetails
-  }
+  },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: Signup
+  },
+  {
+    path: '/signin',
+    name: 'Signin',
+    component: Signin
+  },
+  {
+    path: '/wishlist',
+    name: 'WishList',
+    component: WishList
+  },
+  {
+    path : '/cart',
+    name : 'Cart',
+    component : Cart
+  },
 ];
 
 const router = createRouter({
